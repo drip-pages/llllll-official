@@ -1,1 +1,324 @@
-hello world!
+
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"><meta charset="utf-8">
+<title>||||||（6pillars）｜DAppsをまたいで利用可能なトークンを、誰でも生成できるERC721拡張スマートコントラクト</title>
+<meta name="description" content="||||||（6pillars / シックスピラーズ）はDAppsをまたいで利用可能なトークンを、誰でも生成できるERC721拡張スマートコントラクトです">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--公開したら消す-->
+<meta name=”robots” content=”noindex” />
+<link rel=”canonical” href=”https://6-pillars.ooo/” />
+  <!--公開したら消す-->
+<link href="css/style.css" rel="stylesheet">
+
+<link rel="icon" href="img/original.png">
+<meta name="google-site-verification" content="B2NLnzflrsbTCyEXD6aaCA0A99o_MAmvloEeLyqYEyU">
+<meta property="og:image" content="img/og_img.png">
+<meta property="og:url" content="http://6-pillars.ooo">
+<meta property="og:title" content="||||||（6 pillars）｜DAppsをまたいで利用可能なトークンを、誰でも生成できるスマートコントラクト">
+<meta property="og:site_name" content="||||||（6 pillars）｜DAppsをまたいで利用可能なトークンを、誰でも生成できるスマートコントラクト">
+<meta property="og:type" content="website">
+<meta property="og:description" content="||||||（6 pillars / シックスピラーズ）はDApps をまたいで利用可能なトークンを誰でも生成できる、Ethereum 上で動作するスマートコントラクト">
+<link rel="stylesheet" href="css/style-6p.css">
+<link rel="stylesheet" href="css/style-p-origin.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/wow.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script>
+$(document).ready(function(){
+  var urlHash = location.hash;
+  if(urlHash) {
+    $('body,html').stop().scrollTop(0);
+    setTimeout(function () {
+      scrollToAnker(urlHash) ;
+    }, 100);
+  }
+
+  $('a[href^="#"]').click(function() {
+    var href= $(this).attr("href");
+    var hash = href == "#" || href == "" ? 'html' : href;
+    scrollToAnker(hash);
+    return false;
+  });
+
+  function scrollToAnker(hash) {
+    var target = $(hash);
+    var position = target.offset().top;
+    $('body,html').stop().animate({scrollTop:position}, 500);
+  }
+})
+  </script>
+<meta property="og:description" content="||||||（6 pillars / シックスピラーズ）はDApps をまたいで利用可能なトークンを誰でも生成できる、Ethereum 上で動作するスマートコントラクト" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="||||||（6 pillars / シックスピラーズ）">
+<meta name="twitter:description" content="||||||（6 pillars / シックスピラーズ）はDApps をまたいで利用可能なトークンを誰でも生成できる、Ethereum 上で動作するスマートコントラクト">
+<meta name="twitter:image:src" content="img/og_img.png">
+
+<script type="text/javascript" src="js/lazysizes.min.js?1538010888"></script>
+<script type="text/javascript" src="js/lazyLoad.js"></script>
+  <script type="text/javascript" src="//assets.peraichi.com/cjs/dist/peraichi_setting.js?1538017412"></script>
+  </head>
+  <body class="theme-base theme-blank" style="overflow: auto; padding-top: 0px;">
+  <div class="pera1-section block" data-structure="b-header-nav-logo-img" id="section-2">
+  <div class="p-header">
+    <div class="section">
+      <div class="m_navigation p-m_navigation u-align-right pera1-editable" data-pera1-type="navigation" data-bgcolor="" style="text-align: right;">
+        <div class="grid-wrapper grid-wrapper--lg p-navigation__wrapper">
+          <div class="p-navigation row middle-xs">
+            <div class="c-inner c-inner--vertical c-inner--one-elem c-inner-sp--sm">
+              <div class="navigationHeader p-navigationHeader col-xs-12 col-md">
+                <div class="p-header__nav-heading p-header__logo c-img c-img--responsive-v u-align-left pera1-removable"><img class="pera1-editable" src="img/logo_menu.png" alt="" data-structure="e-img">
+                </div>
+              </div>
+              <div class="btn_navigationToggle p-btn_navigationToggle"><i class="fa"></i></div>
+            </div>
+            <ul class="m_navigationMenu p-m_navigationMenu col-xs-12 col-md u-fslg" data-textcolor="#333" style="color: rgb(51, 51, 51);"><li><a href="#background" target="_self">開発背景</a></li><li><a href="#special" target="_self">特徴</a></li><li><a href="#example" target="_self">利用例</a></li><li><a href="#how2use" target="_self">利用方法</a></li><li><a href="#contact" target="_self">Contact us</a></li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pera1-section block" data-structure="b-html-code" id="section-3">
+  <div class="c-bg-img c-bg-img--cover pera1-bg-editable" data-bg-key="0">
+    <div class="pera1-editable"><div class="s_full-bgImg-leftImg-1col-reverse section pera1-section mb-80">
+  <div class="m_full-bgImg-reverse pera1-bg-editable" data-bg-key="0">
+
+    <div class="full-bgImg_ctt">
+      
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="m_card-leftImg-middle">
+            <p class="e_img pera1-removable"><img class="img-full pera1-editable" src="img/logo.png"></p>
+            <div class="card-leftImg-middle_ctt">
+              <div class="e_txt pera1-editable pera1-removable">DAppsをまたいで利用可能なトークンを、誰でも生成できるERC721拡張スマートコントラクト</div>
+              <p class="e_btn"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+  </div>
+</div>
+  <div class="pera1-section block" data-structure="b-html-code" id="background">
+  <div class="c-bg-img c-bg-img--cover pera1-bg-editable" data-bg-key="1">
+    <div class="pera1-editable">
+      <div class="s_card-topImg-1col section pera1-section mb-80" data-section-id="branding-s_card_topImg_1col" id="section-20">
+  <div class="container-fluid">
+    <h2 class="wow fadeInUp e_head text-center pera1-editable pera1-removable">開発背景</h2>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="m_card-topImg">
+          
+          
+          <div class="wow fadeInUp e_txt pera1-editable pera1-removable"><p>ERC721を初めとしたDAppsで使われているNon-Fungibleトークンは、移行や売買はユーザー同士で可能ですが、発行や破棄はDApps運営主体が握っており、従来の中央集権的サービスに近い形をとっています。<br>またそのトークンは、発行したDApps内でしか価値を発揮できないものがほとんどです。<br>そんな中で、発行や破棄すらもユーザー自身で可能な、かつトークンの持つデータは改竄不可能な、そしてどんな DApps でも利用でき、それぞれの DApps で価値が変化する、より柔軟で自由なNon-Fungibleトークンがあれば、既存のDAppsが提唱するトークンエコノミーよりも広い世界を創れるのではないか、という想いから開発しました。<br></p></div>
+          <p class="e_btn"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+  </div>
+</div><div class="pera1-section block" data-structure="b-html-code" id="special">
+  <div class="c-bg-img c-bg-img--cover pera1-bg-editable" data-bg-key="2">
+    <div class="pera1-editable"><div class="s_card-topImg-3col section pera1-section mb-80" data-section-id="branding-s_card_topImg_3col">
+  <div class="container-fluid">
+    <h2 class="wow fadeInUp e_head text-center pera1-editable pera1-removable">特徴</h2>
+    <div class="row">
+      <div class="wow fadeInUp col-sm-4"  data-wow-delay="0.2s">
+        <div class="m_card-topImg">
+          <p class="e_img pera1-removable"><img class="pera1-editable" src="img/features01.png"></p>
+          <h3 class="e_head text-center pera1-editable pera1-removable font-size-18px">発行の自由</h3>
+          <div class="e_txt pera1-editable pera1-removable"></div>
+          <p class="e_btn">誰でもトークンを発行できます。ユーザーは所有するトークンをいつでも自由に移行できます。</p>
+        </div>
+      </div>
+      <div class="wow fadeInUp col-sm-4"  data-wow-delay="0.4s">
+        <div class="m_card-topImg">
+          <p class="e_img pera1-removable"><img class="pera1-editable" src="img/features02.png"></p>
+          <h3 class="e_head text-center pera1-editable pera1-removable font-size-18px">所有の証明</h3>
+          <div class="e_txt pera1-editable pera1-removable"></div>
+          <p class="e_btn">||||||は誰がどのトークンを所有しているかを証明します。</p>
+        </div>
+      </div>
+      <div class="wow fadeInUp col-sm-4"  data-wow-delay="0.6s">
+        <div class="m_card-topImg">
+          <p class="e_img pera1-removable"><img class="pera1-editable" src="img/features03.png"></p>
+          <h3 class="e_head text-center pera1-editable pera1-removable font-size-18px">発行元の証明</h3>
+          <div class="e_txt pera1-editable pera1-removable"></div>
+          <p class="e_btn">||||||はトークンがどこで発行されたかを証明します。</p>
+        </div>
+      </div>
+    </div>
+<div class="row">
+      <div class="wow fadeInUp col-sm-4"  data-wow-delay="0.2s">
+        <div class="m_card-topImg">
+          <p class="e_img pera1-removable"><img class="pera1-editable" src="img/features04.png"></p>
+          <h3 class="e_head text-center pera1-editable pera1-removable font-size-18px">利用の自由</h3>
+          <div class="e_txt pera1-editable pera1-removable"></div>
+          <p class="e_btn">トークンは||||||に対応したDApps間で自由に利用できます。</p>
+        </div>
+      </div>
+      <div class="wow fadeInUp col-sm-4"  data-wow-delay="0.4s">
+        <div class="m_card-topImg">
+          <p class="e_img pera1-removable"><img class="pera1-editable" src="img/features05.png"></p>
+          <h3 class="e_head text-center pera1-editable pera1-removable font-size-18px">不変なデータ</h3>
+          <div class="e_txt pera1-editable pera1-removable"></div>
+          <p class="e_btn">トークンは発行時に任意のデータを付与でき、そのデータは誰であっても変更できません。</p>
+        </div>
+      </div>
+      <div class="wow fadeInUp col-sm-4"  data-wow-delay="0.6s">
+        <div class="m_card-topImg">
+          <p class="e_img pera1-removable"><img class="pera1-editable" src="img/features06.png"></p>
+          <h3 class="e_head text-center pera1-editable pera1-removable font-size-18px">自由な振る舞い</h3>
+          <div class="e_txt pera1-editable pera1-removable"></div>
+          <p class="e_btn">あるDAppsではドラゴンとなるトークンが、別のDAppsでは投票権に、また別のDAppsでは仮想空間の土地になるかもしれません。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+  </div>
+</div>
+    <div class="pera1-section block" data-structure="b-html-code" id="example">
+  <div class="c-bg-img c-bg-img--cover pera1-bg-editable" data-bg-key="3">
+    <div class="pera1-editable"><div class="s_checklist section pera1-section mb-80" data-section-id="branding-s_checklist" id="section-23">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="m_checkList">
+          <h2 class="wow fadeInUp e_head text-center pera1-editable pera1-removable"><span id="_mce_caret" data-mce-bogus="true"><span style="color: rgb(77, 77, 77);" data-mce-style="color: #4d4d4d;"></span></span>利用例</h2>
+          <div class="e_checkList">
+            <ul>
+              <li class="wow fadeInRight pera1-removable pera1-multiple" data-elem-name="checklist">
+                <div class="pera1-editable">あるゲーム系DAppsでは弱いキャラクターとしての価値しかないトークンが、他のゲーム系DAppsでは強いキャラクターとして利用できる</div>
+              </li><li class="wow fadeInRight pera1-removable" data-elem-name="checklist">
+                <div class="pera1-editable">あるDAppsで作成し利用したトークンを持ったまま別のDAppsを始めると、特典が受け取れる</div>
+              </li><li class="wow fadeInRight pera1-removable" data-elem-name="checklist">
+                <div class="pera1-editable">デジタルアセットと紐づくトークンを発行でき、アセットの所有権を別の人に移行しても、発行元アドレスがそのアセットの作成者を証明できる</div>
+              </li><li class="wow fadeInRight pera1-removable" data-elem-name="checklist">
+                <div class="pera1-editable">発行元が不明なトークンの利用を制限できる</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+  </div>
+</div>
+    <div class="pera1-section block" data-structure="b-html-code" id="how2use">
+  <div class="c-bg-img c-bg-img--cover pera1-bg-editable" data-bg-key="4">
+    <div class="pera1-editable"><div class="wow fadeInLeft s_card-leftImg-1col-bdr section pera1-section mb-80" data-section-id="branding-s_card_leftImg_1col_bdr" id="section-24">
+  <div class="container-fluid">
+    <h2 class="e_head text-center pera1-editable pera1-removable">利用方法</h2>
+    <div class="m_card-leftImg row">
+      <div class="col-sm-6 pera1-removable">
+        <p class="e_img"><img class="pera1-editable" src="img/monalisa.png"></p>
+      </div>
+      <div class="col-sm-6 d-flex">
+        
+        <p class="e_btn"><a class="btn btn-primary pera1-editable pera1-removable" href="https://github.com/drip-oss/llllll" target="_blank" style="background-color: rgb(6, 48, 103);">github</a></p>
+      </div>
+    </div>
+  </div>
+</div></div>
+  </div>
+</div>
+    <div class="pera1-section block" data-structure="b-html-code" id="contact">
+  <div class="c-bg-img c-bg-img--cover pera1-bg-editable" data-bg-key="5">
+    <div class="pera1-editable"><div class="wow fadeInUp  pera1-section section s_embed_gform mb-80" data-section-id="branding-s_embed_gform" id="section-25">
+    <div class="container-fluid">
+    <h2 class="wow fadeInUp e_head text-center pera1-editable pera1-removable">Contact us</h2>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="pera1-editable text-center m_gformWrapper" data-pera1-type="embed_gform"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLScvPcL_Dahwy-4yZf9uVx8U6K9bNifXw2OGBKJAtrtepzdC8Q/viewform?embedded=true" width="640" height="939" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe></div>
+            </div>
+        </div>
+    </div>
+</div></div>
+  </div>
+</div><div class="pera1-section block" data-structure="b-html-code" id="section-10">
+  <div class="c-bg-img c-bg-img--cover pera1-bg-editable" data-bg-key="6">
+    <div class="pera1-editable"><div class="container-fluid">
+<div class="row wow fadeInUp">
+<div class="col-xs-3 text-center">
+  <a class="js-facebook-share" target="_blank" rel="nofollow">
+    <img class="share-btn" alt="Facebookでシェアする" src="https://s3-ap-northeast-1.amazonaws.com/drip.drecom.co.jp/images/sharebtn/facebook.svg">
+  </a>
+</div>
+
+<div class="col-xs-3 text-center">
+  <a class="js-twitter-share ml-3" target="_blank" rel="nofollow">
+    <img class="share-btn" alt="Twitterでシェアする" src="https://s3-ap-northeast-1.amazonaws.com/drip.drecom.co.jp/images/sharebtn/twitter.svg">
+  </a>
+</div>
+<div class="col-xs-3 text-center">
+  <a class="js-line-share ml-3" rel="nofollow">
+    <img class="share-btn" alt="LINEでシェアする" src="https://s3-ap-northeast-1.amazonaws.com/drip.drecom.co.jp/images/sharebtn/line.svg">
+  </a>
+</div>
+<div class="col-xs-3 text-center">
+  <a class="js-hatena-share mx-2" target="_blank" rel="nofollow">
+    <img class="share-btn" alt="はてなでシェアする" src="https://s3-ap-northeast-1.amazonaws.com/drip.drecom.co.jp/images/sharebtn/hatena.svg">
+  </a>
+</div>
+</div>
+</div>
+
+<script>
+$(function(){
+  var url = location.href;
+  var title = $('title').html();
+ 
+  // twitter シェアの生成
+  var text = encodeURIComponent(title);
+  var tweet_url = 'http://twitter.com/share?url=' + url + '&text=' + text;
+  $('a.js-twitter-share').attr("href", tweet_url);
+ 
+  // facebookシェアの生成
+  var facebook_url = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  $('a.js-facebook-share').attr("href", facebook_url);
+ 
+  // LINEシェア
+  $('.js-line-share').off('click');
+  $('.js-line-share').on('click', function(){
+    var message = title + ' ' + url;
+    var shareLink = 'http://line.me/R/msg/text/?' + encodeURIComponent(message);
+    window.open(shareLink, '_blank');
+  });
+ 
+  // はてなブックマーク
+  var hatena_url = 'http://b.hatena.ne.jp/entry/' + url;
+  $('a.js-hatena-share').attr("href", hatena_url);
+  // 標準のはてなブックマークボタンには次の２つも付くが無くても動作する
+  // $('a.js-hatena-share').attr("data-hatena-bookmark-title", title);
+  // $('a.js-hatena-share').attr("data-hatena-bookmark-layout", "simple");
+});
+</script></div>
+  </div>
+</div><div class="pera1-section block" data-structure="b-html-code" id="section-9">
+  <div class="c-bg-img c-bg-img--cover pera1-bg-editable" data-bg-key="7">
+    <div class="pera1-editable"><div class="footer block">
+          <div class="c-bg-img c-bg-img--cover pera1-bg-editable" data-bg-key="6">
+            <div class="c-wrapper c-wrapper">
+              <div class="p-footer__inner">
+                <div class="u-align-center">
+                      <div class="pera1-editable mb-80" data-structure="e-text"><a class="pricacyLink" href="https://www.drecom.co.jp/privacy/" target="_blank">Privacy policy</a></div>
+                      <div class="pera1-editable" data-structure="e-text">Copyright Drecom Co., Ltd. All Rights Reserved.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+  </div>
+</div>
+  
+
+</body></html>
